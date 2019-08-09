@@ -16,9 +16,14 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
   const data = response.data;
   console.log(data);
   console.log(data.topics);
-  const TopicsFunction = createTabs(data);
-  topics.appendChild(TopicsFunction);
+  data.forEach(items = {
+    
+  })
+//   const TopicsFunction = createTabs(data);
+//   topics.appendChild(TopicsFunction);
 })
+
+// followersArray.forEach(items 
 
 // axios
 //   .get("/api/endpoint")
@@ -53,17 +58,20 @@ function createTabs(object){
 //   });
 
   //creating text content
-object.topics.forEach(function(element){
-    console.log(element);
-    
-})
-//   tab.textContent = object.topics;
+// object.topics.forEach(function(element){
+//     const div = document.createElement('div');
+//     console.log(element);
+//     tab.appendChild(div);
+// })
+  tab.textContent = object.topics;
 
 
   return tab;
 }
 
 topics.appendChild(createTabs())
+
+
 
 // object.topics.forEach(object.topics => {
 //     const individualTab = document.createElement('div');

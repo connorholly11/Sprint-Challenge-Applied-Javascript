@@ -15,10 +15,32 @@
 //     <span>By {authors name}</span>
 //   </div>
 // </div>
+
+
+//do a forEach in axios that says do this for each topic within the articles
+
+
+//for each topic in w article do this specific thing (which is the function)
 //
 // Create a card for each of the articles and add the card to the DOM.
 
+axios.get('https://lambda-times-backend.herokuapp.com/articles')
+    .then((response) => {
+        const data = response.data;
+        console.log(data);
+        const articleFunction = createArticles(data);
+        article.appendChild(articleFunction);
+    })
 
+
+// axios.get('https://lambda-times-backend.herokuapp.com/topics')
+// .then((response) => {
+//   const data = response.data;
+//   console.log(data);
+//   console.log(data.topics);
+//   const TopicsFunction = createTabs(data);
+//   topics.appendChild(TopicsFunction);
+// })
 
 
 
