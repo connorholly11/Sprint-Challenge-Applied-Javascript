@@ -26,10 +26,10 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then((response) => {
-        // const data = response.data;
-        // const articleData = data.articles;
-        // console.log(data);
-        // console.log(articleData);
+        const data = response.data;
+        const articleData = data.articles;
+        console.log(data);
+        console.log(articleData);
         // const articleFunction = createArticles(data);
         // article.appendChild(articleFunction);
     
@@ -43,14 +43,6 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
         })
     }
 })
-// axios.get('https://lambda-times-backend.herokuapp.com/topics')
-// .then((response) => {
-//   const data = response.data;
-//   console.log(data);
-//   console.log(data.topics);
-//   const TopicsFunction = createTabs(data);
-//   topics.appendChild(TopicsFunction);
-// })
 
 
 
@@ -84,10 +76,10 @@ function createArticles(object){
   span.classList.add('span');
 
   //creating text content... going to be getting this from the GET function and using object.(whatever it says in your data from GET function)
-    headline.textContent = object.headline;
+    
     author.textContent = object.authorName;
     img.src = object.authorPhoto;
-
+    headline.textContent = object.headline;
 
   return card;
 }
