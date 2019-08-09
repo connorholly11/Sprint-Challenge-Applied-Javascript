@@ -18,7 +18,9 @@
 //   console.log(data);
 //   console.log(topicsData);
 //   for (topicsData){
-
+//     data[topicsData].forEach(
+//     const TopicsFunction = createTabs(data);
+//     items.appendChild(TopicsFunction);)
 //   }
 // //   topicsData.forEach(items => {
 // //     const TopicsFunction = createTabs(data);
@@ -27,53 +29,73 @@
   
 // })
 
-// // followersArray.forEach(items 
+// var data = response.data.objects;
 
-// // axios
-// //   .get("/api/endpoint")
-// //   .then(response => {
-// //     this.data = response.data;
-// //     this.data.forEach(function(item) {
-// //       console.log("found: ", item)
-// //       console.log("found id: ", item.id)
-// //       this.GetLikes(item.id);
-// //     });
-// //   })
+//         for (var i = 0; i < data.length; i++) {
+//             let type = data[i].content_type.toLowerCase();
 
-// //then create a component based on the data and put in on the .topics 
+//             if (type !== "episode") {
+//                 isSection(data[i]);
+//             }
 
-// const topics = document.querySelector('.topics')
+//             if (type === "episode") {
+//                 isEpisode(data[i].content_url);
+//             }
 
-// function createTabs(object){
-//   //creating elements
-//   const tab = document.createElement('div');
+axios.get('https://lambda-times-backend.herokuapp.com/topics')
+.then((response) => {
+    response.data.topics.forEach(items => {
+        topicsContainer.appendChild(createTabs(items));
+    })
+})
 
-//   //creating structure (nothing to append to?)
+// followersArray.forEach(items 
 
-//   //creating class names
-//   tab.classList.add('tab');
+// axios
+//   .get("/api/endpoint")
+//   .then(response => {
+//     this.data = response.data;
+//     this.data.forEach(function(item) {
+//       console.log("found: ", item)
+//       console.log("found id: ", item.id)
+//       this.GetLikes(item.id);
+//     });
+//   })
 
-// //   const arraySparse = [1,3,,7];
-// //   let numCallbackRuns = 0;
+//then create a component based on the data and put in on the .topics 
+
+const topicsContainer = document.querySelector('.topics')
+
+function createTabs(object){
+  //creating elements
+  const tab = document.createElement('div');
+
+  //creating structure (nothing to append to?)
+
+  //creating class names
+  tab.classList.add('tab');
+
+//   const arraySparse = [1,3,,7];
+//   let numCallbackRuns = 0;
   
-// //   arraySparse.forEach(function(element){
-// //     console.log(element);
-// //     numCallbackRuns++;
-// //   });
+//   arraySparse.forEach(function(element){
+//     console.log(element);
+//     numCallbackRuns++;
+//   });
 
-//   //creating text content
-// // object.topics.forEach(function(element){
-// //     const div = document.createElement('div');
-// //     console.log(element);
-// //     tab.appendChild(div);
-// // })
-//   tab.textContent = object.topics;
+  //creating text content
+// object.topics.forEach(function(element){
+//     const div = document.createElement('div');
+//     console.log(element);
+//     tab.appendChild(div);
+// })
+  tab.textContent = object;
 
 
-//   return tab;
-// }
+  return tab;
+}
 
-// topics.appendChild(createTabs())
+// topicsContainer.appendChild(createTabs())
 
 
 

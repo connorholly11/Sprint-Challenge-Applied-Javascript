@@ -26,13 +26,23 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then((response) => {
-        const data = response.data;
-        console.log(data);
-        const articleFunction = createArticles(data);
-        article.appendChild(articleFunction);
-    })
-
-
+        // const data = response.data;
+        // const articleData = data.articles;
+        // console.log(data);
+        // console.log(articleData);
+        // const articleFunction = createArticles(data);
+        // article.appendChild(articleFunction);
+    
+    // for (let i = 0; i < articleData.length; i++){
+    //     createArticles(articleData);
+    // }
+    let articles = response.data.articles;
+    for (topic in articles){
+        articles[topic].forEach(article => {
+            articleContainer.appendChild(createArticles(article))
+        })
+    }
+})
 // axios.get('https://lambda-times-backend.herokuapp.com/topics')
 // .then((response) => {
 //   const data = response.data;
@@ -44,7 +54,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 
 
 
-const article = document.querySelector('.cards-container')
+const articleContainer = document.querySelector('.cards-container')
 
 function createArticles(object){
   //creating elements
@@ -55,6 +65,7 @@ function createArticles(object){
   const img = document.createElement('img');
   //imgContainer closes after img
   const span = document.createElement('span');
+  
 
   //creating structure
   card.appendChild(headline);
@@ -75,13 +86,12 @@ function createArticles(object){
   //creating text content... going to be getting this from the GET function and using object.(whatever it says in your data from GET function)
     headline.textContent = object.headline;
     author.textContent = object.authorName;
-    img.textContent = object.authorPhoto;
+    img.src = object.authorPhoto;
 
 
   return card;
 }
 
-article.appendChild(createArticles())
 
 
 
