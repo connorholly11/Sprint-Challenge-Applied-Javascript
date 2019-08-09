@@ -11,65 +11,69 @@
 
 // Might have to mess with the GET request to iterate over the topics
 
-axios.get('https://lambda-times-backend.herokuapp.com/topics')
-.then((response) => {
-  const data = response.data;
-  console.log(data);
-  console.log(data.topics);
-  data.forEach(items = {
-    
-  })
-//   const TopicsFunction = createTabs(data);
-//   topics.appendChild(TopicsFunction);
-})
+// axios.get('https://lambda-times-backend.herokuapp.com/topics')
+// .then((response) => {
+//   const data = response.data;
+//   const topicsData = data.topics;
+//   console.log(data);
+//   console.log(topicsData);
+//   for (topicsData){
 
-// followersArray.forEach(items 
-
-// axios
-//   .get("/api/endpoint")
-//   .then(response => {
-//     this.data = response.data;
-//     this.data.forEach(function(item) {
-//       console.log("found: ", item)
-//       console.log("found id: ", item.id)
-//       this.GetLikes(item.id);
-//     });
-//   })
-
-//then create a component based on the data and put in on the .topics 
-
-const topics = document.querySelector('.topics')
-
-function createTabs(object){
-  //creating elements
-  const tab = document.createElement('div');
-
-  //creating structure (nothing to append to?)
-
-  //creating class names
-  tab.classList.add('tab');
-
-//   const arraySparse = [1,3,,7];
-//   let numCallbackRuns = 0;
+//   }
+// //   topicsData.forEach(items => {
+// //     const TopicsFunction = createTabs(data);
+// //     items.appendChild(TopicsFunction);
+// //   })
   
-//   arraySparse.forEach(function(element){
-//     console.log(element);
-//     numCallbackRuns++;
-//   });
-
-  //creating text content
-// object.topics.forEach(function(element){
-//     const div = document.createElement('div');
-//     console.log(element);
-//     tab.appendChild(div);
 // })
-  tab.textContent = object.topics;
+
+// // followersArray.forEach(items 
+
+// // axios
+// //   .get("/api/endpoint")
+// //   .then(response => {
+// //     this.data = response.data;
+// //     this.data.forEach(function(item) {
+// //       console.log("found: ", item)
+// //       console.log("found id: ", item.id)
+// //       this.GetLikes(item.id);
+// //     });
+// //   })
+
+// //then create a component based on the data and put in on the .topics 
+
+// const topics = document.querySelector('.topics')
+
+// function createTabs(object){
+//   //creating elements
+//   const tab = document.createElement('div');
+
+//   //creating structure (nothing to append to?)
+
+//   //creating class names
+//   tab.classList.add('tab');
+
+// //   const arraySparse = [1,3,,7];
+// //   let numCallbackRuns = 0;
+  
+// //   arraySparse.forEach(function(element){
+// //     console.log(element);
+// //     numCallbackRuns++;
+// //   });
+
+//   //creating text content
+// // object.topics.forEach(function(element){
+// //     const div = document.createElement('div');
+// //     console.log(element);
+// //     tab.appendChild(div);
+// // })
+//   tab.textContent = object.topics;
 
 
-  return tab;
-}
+//   return tab;
+// }
 
-topics.appendChild(createTabs())
+// topics.appendChild(createTabs())
 
 
 

@@ -73,6 +73,9 @@ function createArticles(object){
   span.classList.add('span');
 
   //creating text content... going to be getting this from the GET function and using object.(whatever it says in your data from GET function)
+    headline.textContent = object.headline;
+    author.textContent = object.authorName;
+    img.textContent = object.authorPhoto;
 
 
   return card;
