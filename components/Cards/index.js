@@ -26,10 +26,10 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then((response) => {
-        // const data = response.data;
-        // const articleData = data.articles;
-        // console.log(data);
-        // console.log(articleData);
+        const data = response.data;
+        const articleData = data.articles;
+        console.log(data);
+        console.log(articleData);
         // const articleFunction = createArticles(data);
         // article.appendChild(articleFunction);
     
@@ -61,7 +61,7 @@ function createArticles(object){
 
   //creating structure
   card.appendChild(headline);
-  headline.appendChild(author);
+  card.appendChild(author);
   author.appendChild(imgContainer);
   imgContainer.appendChild(img);
   //imgContainer closes after img
