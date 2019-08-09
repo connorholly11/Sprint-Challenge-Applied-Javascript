@@ -32,9 +32,9 @@ function Header(){
   //text content
   spanDate.textContent = "MARCH 28, 2019";
   h1.textContent = "Lambda Times";
-  spanTemp.textContent = "98";
+  spanTemp.textContent = "98 Degrees";
 
-  return Header;
+  return header;
 }
 
 headerContainer.appendChild(Header())

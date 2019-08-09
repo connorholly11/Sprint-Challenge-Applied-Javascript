@@ -20,26 +20,26 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
   topics.appendChild(TopicsFunction);
 })
 
-// //then create a component based on the data and put in on the .topics 
+//then create a component based on the data and put in on the .topics 
 
-// const topics = document.querySelector('.topics')
+const topics = document.querySelector('.topics')
 
-// function createTabs(object){
-//   //creating elements
-//   const tab = document.createElement('div');
+function createTabs(object){
+  //creating elements
+  const tab = document.createElement('div');
 
-//   //creating structure (nothing to append to?)
+  //creating structure (nothing to append to?)
 
-//   //creating class names
-//   tab.classList.add('tabs');
+  //creating class names
+  tab.classList.add('tabs');
 
-//   //creating text content
-//   tab.textContent = object.topics;
+  //creating text content
+  tab.textContent = object.topics;
 
-//   return tab;
-// }
+  return tab;
+}
 
-// topics.appendChild(createTabs())
+topics.appendChild(createTabs())
 
 
 

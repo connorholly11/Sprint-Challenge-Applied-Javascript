@@ -1,3 +1,15 @@
+1. What is the DOM? The DOM is basically an API to the webpage, but we can manipulate the page through it because whatever we do in the DOM directly affects the webpage. 
+
+2. What is an event? An event is something that the user does while on the web page. Javascript allows us to “react” to these events. 
+
+3. What is an event listener? This waits for an event to happen. The eventListeneradd() method will wait for the event you assign and then react to it.
+
+4. Why would we convert a NodeList into an Array? You can’t manipulate a nodelist with JS so if you turn it into an array using querySelector or getElement then you can turn it into an array and then manipulate it. 
+
+5. What is a component? DRY reusable code that also saves us time.
+
+
+
 # Sprint-Challenge Applied Javascript - Lambda Times
 
 This challenge allows you to practice the concepts and techniques learned over the past week and apply them in a concrete project. This Sprint explored the DOM and the concept of components. During this Sprint, you studied the DOM, DOM Events, and Components, as well as HTTP GET requests, and the axios library. In your challenge this week, you will demonstrate proficiency by creating an online Lambda newspaper called "Lambda Times."
