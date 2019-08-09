@@ -31,7 +31,7 @@ function createTabs(object){
   //creating structure (nothing to append to?)
 
   //creating class names
-  tab.classList.add('tabs');
+  tab.classList.add('tab');
 
   //creating text content
   tab.textContent = object.topics;
