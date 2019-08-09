@@ -26,10 +26,10 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then((response) => {
-        const data = response.data;
-        const articleData = data.articles;
-        console.log(data);
-        console.log(articleData);
+        // const data = response.data;
+        // const articleData = data.articles;
+        // console.log(data);
+        // console.log(articleData);
         // const articleFunction = createArticles(data);
         // article.appendChild(articleFunction);
     
@@ -78,8 +78,14 @@ function createArticles(object){
   //creating text content... going to be getting this from the GET function and using object.(whatever it says in your data from GET function)
     
     author.textContent = object.authorName;
+
     img.src = object.authorPhoto;
+
     headline.textContent = object.headline;
+    
+    console.log(headline);
+    console.log(author);
+    console.log(img);
 
   return card;
 }
