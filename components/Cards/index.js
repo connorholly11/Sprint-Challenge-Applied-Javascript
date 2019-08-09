@@ -62,8 +62,10 @@ function createArticles(object){
   //creating structure
   card.appendChild(headline);
   card.appendChild(author);
+  
   author.appendChild(imgContainer);
   imgContainer.appendChild(img);
+
   //imgContainer closes after img
   author.appendChild(span);
 
@@ -76,8 +78,7 @@ function createArticles(object){
   span.classList.add('span');
 
   //creating text content... going to be getting this from the GET function and using object.(whatever it says in your data from GET function)
-    
-    author.textContent = object.authorName;
+    span.textContent = object.authorName;
 
     img.src = object.authorPhoto;
 
